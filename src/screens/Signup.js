@@ -51,7 +51,7 @@ export default function Signup() {
     console.log(json);
     if (json.success) {
       //save the auth toke to local storage and redirect
-      localStorage.setItem('location',json.location)
+      localStorage.setItem('location',credentials.geolocation)
       localStorage.setItem('token', json.authToken)
       navigate("/login")
 
@@ -84,7 +84,7 @@ export default function Signup() {
             <div className="m-3">
               <label htmlFor="address" className="form-label">Address</label>
               <fieldset>
-                <input type="text" className="form-control" name='address' placeholder='"Click below for fetching address"' value={address} onChange={(e)=>setAddress(e.target.value)} aria-describedby="emailHelp" />
+                <input type="text" className="form-control" name='geolocation' placeholder='"Click below for fetching address"' value={credentials.geolocation} onChange={onChange} aria-describedby="emailHelp" />
               </fieldset>
             </div>
             <div className="m-3">
