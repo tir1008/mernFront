@@ -51,6 +51,7 @@ export default function Signup() {
     console.log(json);
     if (json.success) {
       //save the auth toke to local storage and redirect
+      localStorage.setItem('userEmail',credentials.email)
       localStorage.setItem('location',credentials.geolocation)
       localStorage.setItem('token', json.authToken)
       navigate("/login")
