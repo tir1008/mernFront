@@ -44,7 +44,7 @@ try{
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/auth/chAddr", {
+      const response = await fetch("https://mernback-jcis.onrender.com/api/auth/chAddr", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
